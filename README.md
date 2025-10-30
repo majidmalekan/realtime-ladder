@@ -161,9 +161,9 @@ A simple Blade-based live view is available to visualize ranking changes in real
    ```bash
    ./vendor/bin/sail up -d
    ```
-2. Open your browser and go to:
+2. Open your browser and go to dynamic limit fo top N players:
    ```
-   http://localhost/live
+   http://localhost/live?limit=10
    ```
 3. In another terminal, update player scores using API calls:
    ```bash
