@@ -55,8 +55,7 @@ Commands used:
 ### Clone & setup
 ```bash
 git clone https://github.com/majidmalekan/realtime-ladder
-cd real-time-player-ladder
-
+cd realtime-ladder
 composer install
 cp .env.example .env
 php artisan key:generate
