@@ -24,7 +24,7 @@ class RedisLeaderboardRepository implements LeaderboardRepositoryInterface
      */
     public function setScore(int $playerId, int $score): void
     {
-        Redis::zadd($this->key, ['NX' => false, 'CH' => true], $score, (string)$playerId);
+        Redis::zAdd($this->key, [$playerId => (float)$score]);
     }
 
     /**
