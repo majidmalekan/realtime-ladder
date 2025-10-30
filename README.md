@@ -54,7 +54,7 @@ Commands used:
 
 ### Clone & setup
 ```bash
-git clone https://github.com/<your-username>/real-time-player-ladder.git
+git clone https://github.com/majidmalekan/realtime-ladder
 cd real-time-player-ladder
 
 composer install
