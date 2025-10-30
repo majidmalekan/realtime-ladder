@@ -104,31 +104,31 @@ php artisan key:generate
 
 ### Create Player
 ```bash
-curl -X POST http://localhost/api/players -d "name=majid"
+curl -X POST http://localhost/api/v1/players -d "name=majid"
 ```
 
 ### Update Score (delta +20)
 ```bash
-curl -X POST http://localhost/api/players/1/score \
+curl -X POST http://localhost/api/v1/players/1/score \
   -H "Content-Type: application/json" \
   -d '{"mode":"delta","value":20}'
 ```
 
 ### Update Score (absolute 5000)
 ```bash
-curl -X POST http://localhost/api/players/1/score \
+curl -X POST http://localhost/api/v1/players/1/score \
   -H "Content-Type: application/json" \
   -d '{"mode":"absolute","value":5000}'
 ```
 
 ### Leaderboard
 ```bash
-curl http://localhost/api/leaderboard?limit=10
+curl http://localhost/api/v1/leaderboard?limit=10
 ```
 
 ### Player Rank
 ```bash
-curl http://localhost/api/players/1/rank
+curl http://localhost/api/v1/players/1/rank
 ```
 
 ---
@@ -166,7 +166,7 @@ A simple Blade-based live view is available to visualize ranking changes in real
    ```
 3. In another terminal, update player scores using API calls:
    ```bash
-   curl -X POST http://localhost/api/players/1/score \
+   curl -X POST http://localhost/api/v1/players/1/score \
      -H "Content-Type: application/json" \
      -d '{"mode":"delta","value":50}'
    ```
