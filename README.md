@@ -136,7 +136,7 @@ curl http://localhost/api/players/1/rank
 
 ## Simulation & Recovery Tools
 
-Simulate real-time score changes:
+Simulate real-time score changes players updates:
 ```bash
 ./vendor/bin/sail artisan leaderboard:simulate 50 2000
 ```
