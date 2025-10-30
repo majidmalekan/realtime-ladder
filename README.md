@@ -123,7 +123,7 @@ curl -X POST http://localhost/api/v1/players/1/score \
 
 ### Leaderboard
 ```bash
-curl http://localhost/api/v1/leaderboard?limit=10
+curl "http://localhost/api/v1/leaderboard?limit=10"
 ```
 
 ### Player Rank
