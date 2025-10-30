@@ -67,7 +67,7 @@ php artisan key:generate
 ./vendor/bin/sail up -d
 ```
 
-✅ MySQL & Redis auto-installed & running
+ MySQL & Redis auto-installed & running
 
 ---
 
@@ -77,6 +77,19 @@ php artisan key:generate
 ```
 
 ---
+
+## Seeding Players (Dynamic Count)
+- Default: 1000 players
+```bash
+./vendor/bin/sail artisan db:seed
+```
+- Custom count (example: 5000 players)
+```bash
+./vendor/bin/sail artisan db:seed --count=5000
+```
+
+---
+
 
 ## 🔁 Queue Worker (async persistence)
 ```bash
