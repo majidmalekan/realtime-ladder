@@ -79,13 +79,9 @@ php artisan key:generate
 ---
 
 ## Seeding Players (Dynamic Count)
-- Default: 1000 players
+- Custom count (example: 5000 players) and it rebuilds Redis state:
 ```bash
-./vendor/bin/sail artisan db:seed
-```
-- Custom count (example: 5000 players)
-```bash
-./vendor/bin/sail artisan db:seed --count=5000
+ ./vendor/bin/sail artisan players:seed 5000 --rebuild
 ```
 
 ---

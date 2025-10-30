@@ -16,8 +16,9 @@ class PlayerFactory extends Factory
      */
     public function definition(): array
     {
+        static $counter = 1;
         return [
-            'name' => $this->faker->unique()->userName(),
+            'name' => 'player_' . $counter++,
             'total_score' => 0,
         ];
     }

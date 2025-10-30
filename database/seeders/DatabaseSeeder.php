@@ -11,9 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $count = (int) ($this->command?->option('count') ?? config('constants.PLAYER_SEED_COUNT', 1000));
-        $this->callWith(PlayerSeeder::class, ['count' => $count]);
-        $this->command->info("🎯 Seeding completed with {$count} players.");
-
+        $this->call(PlayerSeeder::class);
     }
 }
