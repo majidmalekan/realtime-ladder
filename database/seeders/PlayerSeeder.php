@@ -11,9 +11,11 @@ class PlayerSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run(int $count = 1000): void
     {
 
         Player::factory()->count(100)->create();
+        $this->command->info("✅ Created {$count} players successfully!");
+
     }
 }

@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,7 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(PlayerSeeder::class);
+        $count = (int) ($this->command?->option('count') ?? config('constants.PLAYER_SEED_COUNT', 1000));
+        $this->callWith(PlayerSeeder::class, ['count' => $count]);
+        $this->command->info("🎯 Seeding completed with {$count} players.");
 
     }
 }
